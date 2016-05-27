@@ -1,15 +1,23 @@
 ﻿using System.Web.Mvc;
+using eManager.Domain;
 
 namespace eManager.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IDepartmentDataSource _db;
+
+        public HomeController(IDepartmentDataSource db)
+        {
+            _db = db;
+        }
+
         public ActionResult Index()
         {
-            ViewBag.Message = "You hit the index action of the home controller";
+            var allDepartments = _db.Departments;
 
             // tells MVC runtime to render a "conventional view"
-            return View();
+            return View(allDepartments);
             // you can also explicitly specify it like this:
             // return View("Index");
         }
