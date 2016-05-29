@@ -8,9 +8,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace AsyncAwaitSamples
 {
     [TestClass]
-    public class SomnezSampleInterviewQuestions
+    public class ScoreStringValue
     {
-
         [TestMethod]
         public void SomnezSampleInterviewQuestions_Score_XRayMachine()
         {
@@ -72,5 +71,4 @@ namespace AsyncAwaitSamples
             }
         }
     }
-
 }
